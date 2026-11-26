@@ -5,7 +5,7 @@ import { loadDashboardData } from "@/lib/runs";
 
 async function DashboardLoader() {
   await connection();
-  const initial = loadDashboardData();
+  const initial = await loadDashboardData();
   return <DashboardClient initial={initial} />;
 }
 
